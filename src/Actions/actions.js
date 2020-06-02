@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export const getTable = () => {
-    let table = axios.get('http://localhost:3100/table')
+    let table = axios.get('https://billing-restaurant.herokuapp.com/table')
     // table.then(res => {
     //     console.log(res.data)
     // })
@@ -25,7 +25,7 @@ export const selectTable = (id) => {
 }
 
 export const getWaiters = () => {
-    let req = axios.get('http://localhost:3100/waiter')
+    let req = axios.get('https://billing-restaurant.herokuapp.com/waiter')
     return dispatch => {
         req.then(resp => {
             dispatch({
@@ -44,7 +44,7 @@ export const setWaiter = (id) => {
 }
 
 export const getMenu = () => {
-    let req = axios.get('http://localhost:3100/menu')
+    let req = axios.get('https://billing-restaurant.herokuapp.com/menu')
     return dispatch => {
         req.then(res => {
             dispatch({
@@ -73,7 +73,7 @@ export const deleteCart = (index) => {
 }
 
 export const setBill = (data) => {
-    let request = axios.post("http://localhost:3100/order",data)
+    let request = axios.post("https://billing-restaurant.herokuapp.com/order",data)
     return dispatch => {
         request.then(response => {
             dispatch({
