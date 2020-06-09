@@ -9,9 +9,9 @@ class App extends Component {
   render() { 
     return (<BrowserRouter>
     <Route path="/" exact><Redirect to="/table"/></Route>
-    <Route path="/table" component={Table}></Route> 
-    <Route path="/waiter" component={Waiter}></Route>  
-    <Route path="/order" component={Order}></Route> 
+    <Route path="/table" component={Table} exact/>
+    <Route path="/waiter" component={Waiter} exact/>
+    <Route path="/order" component={Order} exact/>
     </BrowserRouter>  );
   }
 }
