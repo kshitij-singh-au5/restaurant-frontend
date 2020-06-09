@@ -11,7 +11,7 @@ class App extends Component {
     <Route path="/table" component={Table} />
     <Route path="/waiter" component={Waiter} />
     <Route path="/order" component={Order} />
-    <Route path="/" exact><Redirect to="/table"/></Route>
+    <Route path="/"><Redirect to="/table"/></Route>
     </BrowserRouter>  );
   }
 }
