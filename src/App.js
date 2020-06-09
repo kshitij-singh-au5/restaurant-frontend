@@ -8,10 +8,10 @@ import {BrowserRouter, Route, Link, Redirect} from 'react-router-dom'
 class App extends Component {
   render() { 
     return (<BrowserRouter>
+    <Route path="/table" component={Table} />
+    <Route path="/waiter" component={Waiter} />
+    <Route path="/order" component={Order} />
     <Route path="/" exact><Redirect to="/table"/></Route>
-    <Route path="/table" component={Table} exact/>
-    <Route path="/waiter" component={Waiter} exact/>
-    <Route path="/order" component={Order} exact/>
     </BrowserRouter>  );
   }
 }
