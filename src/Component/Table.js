@@ -20,7 +20,7 @@ class Table extends Component {
     componentDidMount = () => {
         this.props.getTable()
     }
-    render() {console.log(this.props.tables)
+    render() {console.log(this.props)
         return(
             <div className="container text-center">
                 <h1 className="mt-3">Choose one Table</h1>
